@@ -23,8 +23,26 @@ function genererContenu() {
   
 function changerStyle() {
   // Obtenir les éléments p qui sont sous le div demo et changer la couleur spécifiée dans l'input
+ // Lire la couleur entrée dans l'input
+  const couleur = document.getElementById("couleur").value;
+
+
+  const paragraphes = document.querySelectorAll("#demo p");
+
+
+  paragraphes.forEach(function (p) {
+    p.style.color = couleur;
+  });
+  
+
 }
   
 function changerClassBoutons() {
   // Obtenir les éléments boutons et changer leur className pour celui qui est spécifié dans l'input
+  const clase = document.getElementById("btnClass").value
+  const boutons = document.querySelectorAll("button");
+boutons.forEach(function (bouton) {
+    bouton.className = clase;
+  });
+
 }
